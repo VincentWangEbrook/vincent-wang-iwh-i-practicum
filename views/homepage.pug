@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        title #{title}
+        link(rel="stylesheet", href="/css/style.css")
+
+    body
+        h1 #{title}
+        br
+        a(href="http://localhost:3000/update-cobj") Add to this table
+        br
+        table
+            thead
+                tr
+                    th Pet Name
+                    th Pet Color
+                    th Pet Type
+
+            tbody
+                each pet in data
+                    tr
+                        td #{pet.properties.pet_name}
+                        td #{pet.properties.pet_color}
+                        td #{pet.properties.pet_type}
+                    
